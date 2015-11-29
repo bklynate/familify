@@ -7,5 +7,5 @@ class User < ActiveRecord::Base
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: {case_sensative: false}
   has_secure_password
-  validates password length { minimum: 6 }
+  validates :password length: { minimum: 6 }
 end
