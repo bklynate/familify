@@ -1,3 +1,5 @@
-<h1> User Page </h1>
-
-<%= @user.name %>, <%= @user.email %>
+<% provide(:title, @user.name) %>
+<h1>
+  <%= gravatar_for(@user) %>
+  <%= @user.name %>
+</h1>
